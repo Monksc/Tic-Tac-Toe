@@ -17,7 +17,7 @@ public class TicTacToe {
 
     private String [] player1 = {"X", "Player"};
     private String [] player2 = {"O", "Computer"};
-    private String firstTurn = "Player 1";
+    private String firstTurn = "Player 2";
     private String placeHolder = ""; // just takes the place of Strings
     private String userInput = ""; // used for userInput
     private Boolean repeat = true;
@@ -169,7 +169,7 @@ public class TicTacToe {
                 // does after someone took a turn
                 turns ++; 
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(10000);
                 } catch (InterruptedException e) {
                     System.out.println(e.toString());
                 }
@@ -246,7 +246,7 @@ public class TicTacToe {
                                 System.out.print("Type the number where you want to go: ");
                                 int position = scanner.nextInt();
                                 
-                                if (boardObject.checkIfSpotIsTaken(position)){
+                                if (boardObject.checkIfSpotIsTaken(position - 1)){
                                     repeat = true;
                                 }
                                 else {

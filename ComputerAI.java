@@ -107,9 +107,21 @@ public class ComputerAI {
             }
         }
         
-        if (!board[0][0].equals(" ") && board[2][2].equals(" ")){
+        if (!board[0][0].equals(" ") && !board[2][2].equals(" ")){
             if (amountOfMoves(board) == 2){
                 return 9;
+            }
+        }
+        
+        if (!board[0][0].equals(" ") && board[1][1].equals(" ") && amountOfMoves(board) == 2) {
+            
+            if (board[1][0].equals(" ") && board[2][0].equals(" ") && board[2][1].equals(" ")){
+                
+                return 3;   
+            }
+            else {
+             
+                return 7;   
             }
         }
         
